@@ -1,6 +1,6 @@
 module API
   module V1
-    module Product
+    module User
       class Policy < Pragma::Policy::Base
         class Scope < Pragma::Policy::Base::Scope
           def resolve
@@ -9,19 +9,19 @@ module API
         end
 
         def show?
-          true
+          record == user
         end
 
         def create?
-          user.role == "admin" if user
+          true
         end
 
         def update?
-          user.role == "admin" if user
+          false
         end
 
         def destroy?
-          user.role == "admin" if user
+          false
         end
       end
     end
