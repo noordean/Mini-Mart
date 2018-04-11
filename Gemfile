@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.4.2'
 
+
+gem 'bcrypt'
+gem 'jwt'
+
 # Ruby on Rails
 gem 'rails', '~> 5.1.0'
 
